@@ -46,7 +46,15 @@
   ```bash
     docker run --network=<Network-Name> --name front  -d -p 5173:5173 ecom-front
   ```
-  
+  #
+  - HOW TO EXPORT DATADABE TO LOCAL 
+
+```bash
+   docker exec -it <Mongo_Container_Name> bash
+
+   mongodump --db huxnStore --out /dump/huxnStore
+```
+
   #
   - Verify deployment
   ```bash
