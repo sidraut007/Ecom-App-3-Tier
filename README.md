@@ -17,10 +17,8 @@
   ``` 
   
   ```
-  #
-  - Build the Dockerfile
- 
-  ```bash
+  #Build the Dockerfile
+  
   docker build -t sidraut007/Ecom-Front .
   ```
   
