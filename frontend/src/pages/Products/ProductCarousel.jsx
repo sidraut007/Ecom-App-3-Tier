@@ -63,7 +63,7 @@ const ProductCarousel = () => {
                     <h2>{name}</h2>
                     <p> $ {price}</p> <br /> <br />
                     <p className="w-[25rem]">
-                      {description.substring(0, 170)} ...
+                      {description ? description.substring(0, 170) : "No description available"} ...
                     </p>
                   </div>
 
