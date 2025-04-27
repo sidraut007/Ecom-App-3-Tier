@@ -90,6 +90,6 @@
         docker compose up -d 
   ```
 
-![Course Thumbnail](/home.png)
+![Course Thumbnail](/thumb.png)
 
 
