@@ -27,30 +27,44 @@
   #
   - Create a docker network
   ```bash
-  docker network create Ecom-network
+    docker network create <Network-Name>
   ```
   #
-  - Run MONGO container
+  - Run MONGODB container
   ```bash
-        docker run --network=<Network-Name> --name mongo -d -p 27017:27017 mongo
+    docker run --network=<Network-Name> --name mongo -d -p 27017:27017 mongo
   ```
 
   #
   - Run Backend container
   ```bash
-        docker run --network=<Network-Name> --name back  -d -p 5000:5000 ecom-back
+    docker run --network=<Network-Name> --name back  -d -p 5000:5000 ecom-back
   ```
 
   #
   - Run Application container
   ```bash
-        docker run --network=<Network-Name> --name front  -d -p 5173:5173 ecom-front
+    docker run --network=<Network-Name> --name front  -d -p 5173:5173 ecom-front
   ```
+  
   #
   - Verify deployment
   ```bash
-  docker ps
+    docker ps
   ```
+
+   #
+  - HOW TO IMPORT LOCAL DATADABE
+
+```bash
+
+  docker cp ./dump/huxnStore <Mongo_Container_Name>:/data/huxnStore
+
+  docker exec -it <Mongo_Container_Name> bash
+
+  mongorestore --db huxnStore /data/huxnStore
+
+```
   # 
   - Open port 5173 of your AWS instance and access your application
   ```bash
