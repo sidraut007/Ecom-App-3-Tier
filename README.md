@@ -60,6 +60,9 @@
    docker exec -it <Mongo_Container_Name> bash
 
    mongodump --db huxnStore --out /dump/huxnStore
+
+   docker cp mongodb:/dump/huxnStore ./dump/huxnStore
+
 ```
 
    #
